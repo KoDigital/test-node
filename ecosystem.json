@@ -1,0 +1,23 @@
+{
+    "apps": [
+        {
+            "name": "test-node",
+            "script": "./index.js",
+            "env_staging": {
+                "PM2_PUBLIC_KEY": "ztsy8d9a7eqgtlz",
+                "PM2_SECRET_KEY": "veraat846e651d0"
+            }
+        }
+    ],
+    "deploy": {
+        "staging": {
+            "user": "ec2-user",
+            "host": "10.10.11.18",
+            "ref": "origin/master",
+            "repo": "git@github.com:KoDigital/test-node",
+            "path": "/opt/test-node/",
+            "pre-deploy-local": "scp ecosystem.json ec2-user@10.10.11.18:'/opt/test-node/'",
+            "post-deploy": "npm install --silent && env HOME=/opt/pm2 pm2 startOrRestart /opt/test-node/ecosystem.json --env staging && rm /opt/test-node/ecosystem.json"
+        }
+    }
+}
