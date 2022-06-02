@@ -7,6 +7,10 @@ app.get('/test', (req, res) => {
     res.send('hello')
 })
 
+app.get('/health', (req, res) => {
+    res.status(200).send('OK')
+})
+
 const port = process.env.PORT || 8000;
 const server = app.listen(port, function() {
     console.log('Server started', server.address());
