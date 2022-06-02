@@ -26,11 +26,9 @@
         "production": {
             "user": "roman",
             "host": "10.10.7.85",
-            "key": "~/.ssh/deploy.key",
             "ref": "origin/master",
             "repo": "git@github.com:KoDigital/test-node",
             "path": "/home/roman/apps/test-node/",
-            "pre-deploy-local": "scp ecosystem.json roman@10.10.7.85:'/home/roman/apps/test-node/'",
             "post-deploy": "npm install --silent && pm2 startOrRestart /home/roman/apps/test-node/ecosystem.json --env production && rm /home/roman/apps/test-node/ecosystem.json"
         }
     }
