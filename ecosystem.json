@@ -26,6 +26,7 @@
         "production": {
             "user": "roman",
             "host": "10.10.7.85",
+            "key": "~/.ssh/deploy.key",
             "ref": "origin/master",
             "repo": "git@github.com:KoDigital/test-node",
             "path": "/home/roman/apps/test-node/",
