@@ -30,7 +30,7 @@
             "ref": "origin/master",
             "repo": "git@github.com:KoDigital/test-node",
             "path": "/home/roman/apps/test-node/",
-            "post-deploy": "npm install --silent && pm2 startOrRestart /home/roman/apps/test-node/ecosystem.json --env production && rm /home/roman/apps/test-node/ecosystem.json"
+            "post-deploy": "npm install --silent && pm2 startOrRestart ecosystem.json --env production"
         }
     }
 }
