@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 app.get('/test', (req, res) => {
     console.log('Got request')
-    res.send('hello')
+    res.send('hello!')
 })
 
 app.get('/health', (req, res) => {
