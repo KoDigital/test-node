@@ -11,6 +11,10 @@ app.get('/health', (req, res) => {
     res.status(200).send('OK')
 })
 
+app.get('/kill', (req, res) => {
+    process.exit()
+})
+
 const port = process.env.PORT || 8000;
 const server = app.listen(port, function() {
     console.log('Server started', server.address());
