@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy-prod": "git config --global user.name \"Your Name\" && git config --global user.email \"you@example.com\" && git commit -m \"test\" && git push origin master && pm2 deploy ecosystem.json production"
+    "deploy-prod": "pm2 deploy ecosystem.json production"
   },
   "author": "",
   "license": "ISC",
