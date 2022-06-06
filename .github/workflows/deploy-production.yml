@@ -30,7 +30,6 @@ jobs:
         with:
           PING_URL: '127.0.0.1'
           FILE_OVPN: 'config.ovpn'
-          TLS_KEY: ${{ secrets.TLS_KEY }}
         env:
           CA_CRT: ${{ secrets.CA_CRT}}
           USER_CRT: ${{ secrets.USER_CRT }}
