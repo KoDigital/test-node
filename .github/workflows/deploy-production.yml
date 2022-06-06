@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - *
+      - '*'
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
