@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Set up SSH
+        if: github.branch == 'master1'
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy.key
