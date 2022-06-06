@@ -10,7 +10,7 @@ jobs:
 
       - name: Set up SSH
         run: |
-          echo $A
+          echo $AA
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy.key
           sudo chmod 600 ~/.ssh/deploy.key
@@ -21,7 +21,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           CONFIG_OVPN: ${{secrets.CONFIG_OVPN}}
-          A: ${{github.ref}}
+          AA: ${{github.ref}}
 
       - name: Install Open VPN
         run: sudo apt-get install openvpn
